@@ -16,14 +16,9 @@ public class Get {
 	
 	@Given("^I perform GET operation on \"([^\"]*)\"$")
 	public void i_perform_GET_operation_on(String url) throws Throwable {
-		response = RestAssuredExtension.GetDetailsWithPath(url);
+		RestAssuredExtension.GetDetailsWithPath(url);
 		//RestAssured.given().contentType(ContentType.JSON);
 		//RestAssured.baseURI = String.format("http://127.0.0.1:3000%s",url);
-	}
-
-	@Given("^to retrieve the values for ID \"([^\"]*)\"$")
-	public void to_retrieve_the_values_for_ID(String postNumber) throws Throwable {
-		//RestAssured.when().get(String.format("%s", postNumber));
 	}
 
 	@Then("^I check the status code to be \"([^\"]*)\"$")
